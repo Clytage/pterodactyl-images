@@ -2,7 +2,7 @@ FROM        node:16.13.0-alpine
 
 WORKDIR     /app
 
-RUN         apk add --no-cache --update tzdata libc6-compat ffmpeg \
+RUN         apk add --no-cache --update ffmpeg iproute2 git sqlite sqlite-dev python3 python3-dev ca-certificates tzdata zip tar curl g++ make \
             && adduser -D -h /home/container container
 
 USER        container
